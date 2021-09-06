@@ -1,4 +1,3 @@
-ESX = nil
 local blacklist = 0
 local bl = false
 local time = 0
@@ -9,27 +8,13 @@ RegisterNetEvent("blacklist:set")
 	  bl = true
 	  Citizen.CreateThread(function()
 		time = blacklist 
-		while (time ~= 0) do 
+		while (time > 0) do 
 			Wait( 1000 ) 
 			time = time - 1
 		end
 		bl = false
 	end)	
   end)
-
-Citizen.CreateThread(function()
-	while true do
-        while ESX == nil do
-            TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-            Citizen.Wait(100)
-        end
-        if IsControlJustReleased(1, 168) then --F7                 		
-		end
-		Citizen.Wait(10)
-
-	end
-end)
-
 local notifIn = false
 local notifOut = false
 
