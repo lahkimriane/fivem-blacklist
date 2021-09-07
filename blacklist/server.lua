@@ -7,7 +7,7 @@ RegisterCommand("blacklist", function(source, args, rawCommand)
 	duration = tonumber(args[2])
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-		playergroup = xPlayer.getGroup()
+		local playergroup = xPlayer.getGroup()
 		if playergroup == 'superadmin' then	
 	TriggerClientEvent("blacklist:set", idnum, duration)
 else
