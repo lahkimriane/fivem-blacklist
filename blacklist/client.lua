@@ -8,7 +8,7 @@ RegisterNetEvent("blacklist:set")
 	  bl = true
 	  Citizen.CreateThread(function()
 		time = blacklist 
-		while (time > 0) do 
+		while time > 0 do 
 			Wait( 1000 ) 
 			time = time - 1
 		end
