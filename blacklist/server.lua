@@ -11,6 +11,6 @@ RegisterCommand("blacklist", function(source, args, rawCommand)
 		if playergroup == 'superadmin' then	
 	TriggerClientEvent("blacklist:set", idnum, duration)
 else
-	ESX.ShowNotification("Vous n'avez pas accès à cette commande")
+	xPlayer.ShowNotification("Vous n'avez pas accès à cette commande")
   end
   end)
